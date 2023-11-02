@@ -1,3 +1,7 @@
+<?php 
+include "config.php";
+?>
+
 <?php
 Class Database{
     public $host = DB_HOST;
@@ -32,6 +36,8 @@ Class Database{
         die($this -> link -> error.__LINE__);
         if($result -> num_rows > 0){
           return $result ; 
+        }else{
+            return false ;
         }
     }
     //update 
